@@ -5748,7 +5748,15 @@ type Query {
   ): Artwork
 
   # A list of Artworks
-  artworks(ids: [String]): [Artwork]
+  artworks(
+    ids: [String]
+
+    #
+    #         Only return artworks matching specified slugs.
+    #         Accepts list of slugs. (e.g. 'andy-warhol', 'banksy')
+    #
+    slugs: [String]
+  ): [Artwork]
 
   # An Artist
   artist(
@@ -7434,7 +7442,15 @@ type Viewer {
   ): Artwork
 
   # A list of Artworks
-  artworks(ids: [String]): [Artwork]
+  artworks(
+    ids: [String]
+
+    #
+    #         Only return artworks matching specified slugs.
+    #         Accepts list of slugs. (e.g. 'andy-warhol', 'banksy')
+    #
+    slugs: [String]
+  ): [Artwork]
 
   # An Artist
   artist(
